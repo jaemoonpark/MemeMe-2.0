@@ -51,7 +51,11 @@
                                                 <action selector="saveAndShare" destination="BYZ-38-t0r" id="BPg-gc-HmI"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="Rc0-Fm-VCV"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="Rc0-Fm-VCV">
+                                            <connections>
+                                                <action selector="dismissMemeEditor" destination="BYZ-38-t0r" id="0G8-Go-GfW"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -120,13 +124,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2622" y="331"/>
+            <point key="canvasLocation" x="2182" y="124"/>
         </scene>
-        <!--Item-->
+        <!--Table View-->
         <scene sceneID="WsB-uX-cx9">
             <objects>
                 <navigationController id="MAM-1n-DfY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="G2H-gH-5lG"/>
+                    <tabBarItem key="tabBarItem" title="Table View" id="G2H-gH-5lG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qqs-fH-zI1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -152,17 +156,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZVn-32-5ok"/>
+                    <navigationItem key="navigationItem" id="ZVn-32-5ok">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BkF-Xc-6dz">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="stg-Ge-0eD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ms-GD-Nz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079" y="-92"/>
         </scene>
-        <!--Item-->
+        <!--Collection View-->
         <scene sceneID="ao2-qs-9jT">
             <objects>
                 <navigationController id="a4R-40-SA1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="IBq-73-zMO"/>
+                    <tabBarItem key="tabBarItem" title="Collection View" id="IBq-73-zMO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8l0-D9-8im">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -204,7 +214,13 @@
                             <outlet property="delegate" destination="DVr-Zb-O53" id="WEC-E2-PDg"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="lOL-eu-BpO"/>
+                    <navigationItem key="navigationItem" id="lOL-eu-BpO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="11X-kX-33Q">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="tFd-qe-wxH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzM-BR-Pyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,4 +245,7 @@
             <point key="canvasLocation" x="2280" y="1236"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tFd-qe-wxH"/>
+    </inferredMetricsTieBreakers>
 </document>

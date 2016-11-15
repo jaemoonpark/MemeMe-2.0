@@ -123,6 +123,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         }
     }
     
+    @IBAction func dismissMemeEditor(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func saveMeme() -> Meme{
         return Meme(strTop: self.txtFieldTop.text!, strBtm: self.txtFieldBtm.text!, imageOrig: self.viewImage.image!, imageFinal: self.generateMemedImage())
     }
