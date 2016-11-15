@@ -26,7 +26,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOY-8q-Spz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-807" y="-108"/>
+            <point key="canvasLocation" x="-886" y="242"/>
         </scene>
         <!--Meme Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2182" y="124"/>
+            <point key="canvasLocation" x="2138" y="-153"/>
         </scene>
         <!--Table View-->
         <scene sceneID="WsB-uX-cx9">
@@ -232,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ms-GD-Nz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077.5999999999999" y="-92.203898050974516"/>
+            <point key="canvasLocation" x="1078" y="-108"/>
         </scene>
         <!--Collection View-->
         <scene sceneID="ao2-qs-9jT">
@@ -290,12 +290,12 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzM-BR-Pyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1092" y="633"/>
+            <point key="canvasLocation" x="1078" y="597"/>
         </scene>
-        <!--View Controller-->
+        <!--Meme View Controller-->
         <scene sceneID="Kd2-6f-ClU">
             <objects>
-                <viewController id="dBd-7g-yRN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeViewController" id="dBd-7g-yRN" customClass="MemeViewController" customModule="MemeMe_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cuk-PX-5bt"/>
                         <viewControllerLayoutGuide type="bottom" id="Knv-eT-KL6"/>
@@ -303,12 +303,27 @@
                     <view key="view" contentMode="scaleToFill" id="jKP-2M-kVz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tOG-ob-7ol">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tOG-ob-7ol" firstAttribute="top" secondItem="Cuk-PX-5bt" secondAttribute="bottom" id="QJM-HL-RMY"/>
+                            <constraint firstItem="tOG-ob-7ol" firstAttribute="leading" secondItem="jKP-2M-kVz" secondAttribute="leading" id="T1O-IR-erc"/>
+                            <constraint firstItem="Knv-eT-KL6" firstAttribute="top" secondItem="tOG-ob-7ol" secondAttribute="bottom" id="Tev-Dj-m3Z"/>
+                            <constraint firstAttribute="trailing" secondItem="tOG-ob-7ol" secondAttribute="trailing" id="vc2-87-d4c"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imgViewMeme" destination="tOG-ob-7ol" id="5fy-a0-98A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysi-uu-lVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2280" y="1236"/>
+            <point key="canvasLocation" x="2215" y="789"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
