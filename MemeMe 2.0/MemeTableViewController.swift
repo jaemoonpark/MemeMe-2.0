@@ -14,10 +14,6 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var tblMeme: UITableView!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         //updating meme on viewWillAppear so meme properly updates when exiting meme editor
         memes = appDelegate.memes
