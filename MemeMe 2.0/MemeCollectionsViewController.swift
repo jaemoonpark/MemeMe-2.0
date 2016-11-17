@@ -36,8 +36,9 @@ class MemeCollectionsViewController: UICollectionViewController{
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeCollectionViewCell", for: indexPath) as! MemeCollectionViewCell
-        //setting imageview to fill up entire cell
-        cell.memeImageView?.frame = cell.frame
+        //setting imageview to fill up entire cell. setting origin to itself in order to preserve location-- using cell.frame.origin overlaps cells because cell frame has not been properly set yet(?)
+        cell.memeImageView?.frame = CGRect(origin: cell.memeImageView.frame.origin, size: cell.frame.size)
+        
         cell.memeImageView?.image  = memes[indexPath.row].imageFinal
         return cell
     }
