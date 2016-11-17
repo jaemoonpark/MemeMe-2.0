@@ -40,4 +40,13 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         self.navigationController!.pushViewController(memeViewController, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == UITableViewCellEditingStyle.delete){
+            memes.remove(at: indexPath.row)
+            //removing directly from appdelegate memes causes error so setting it equal to modified local meme array.
+            appDelegate.memes = memes
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+        }
+    }
+    
 }
