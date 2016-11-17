@@ -16,6 +16,7 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewWillAppear(_ animated: Bool) {
         //updating meme on viewWillAppear so meme properly updates when exiting meme editor
+        super.viewWillAppear(animated)
         memes = appDelegate.memes
         tblMeme.reloadData()
     }

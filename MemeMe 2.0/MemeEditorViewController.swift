@@ -125,6 +125,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             if (completed) {
                 //appending meme to memes array in AppDelegate
                 (UIApplication.shared.delegate as! AppDelegate).memes.append(self.saveMeme())
+                self.dismiss(animated: true, completion: nil)
             }
         }
     }
