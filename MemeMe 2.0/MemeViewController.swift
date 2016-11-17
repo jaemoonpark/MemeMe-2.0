@@ -19,6 +19,9 @@ class MemeViewController: UIViewController{
     }
     
     @IBAction func editMeme(){
-        
+        //doing modal view for consistency with default edit.
+        let memeEditorViewController = self.storyboard!.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController
+        memeEditorViewController.preSetMeme = meme
+        present(memeEditorViewController, animated: true, completion: nil)
     }
 }

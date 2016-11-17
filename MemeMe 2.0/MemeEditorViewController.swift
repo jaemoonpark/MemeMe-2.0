@@ -18,11 +18,17 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var viewImage: UIImageView!
     @IBOutlet weak var barNavigation: UINavigationBar!
     @IBOutlet weak var barTool: UIToolbar!
+    var preSetMeme: Meme?
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareTextField(textField: txtFieldTop)
         prepareTextField(textField: txtFieldBtm)
         // Do any additional setup after loading the view, typically from a nib.
+        if(preSetMeme != nil){
+            txtFieldTop.text = preSetMeme!.strTop
+            txtFieldBtm.text = preSetMeme!.strBtm
+            viewImage.image = preSetMeme!.imageOrig
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
